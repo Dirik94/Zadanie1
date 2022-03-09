@@ -1,0 +1,47 @@
+﻿<Window x:Class="Zadanie1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Zadanie1"
+        mc:Ignorable="d"
+        Title="Zadanie1" Height="500" Width="800" MinHeight="500" MinWidth="800">
+    <Grid Background="#4287f5">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <ListBox x:Name="listaK" FontSize="15" Margin="10" Background="#494d54" Foreground="#ffffff">
+                <ListBox.Resources>
+                    <Style TargetType="Border"></Style>
+                </ListBox.Resources>
+            </ListBox>
+            <Viewbox Grid.Column="1">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Label Grid.Row="0" Content="Wylosowany" HorizontalAlignment="Center"/>
+                    <Label x:Name="wylosowany" Grid.Row="1" Content="n/a" HorizontalAlignment="Center"/>
+                </Grid>
+            </Viewbox>
+        </Grid>
+        <Viewbox Grid.Row="1">
+            <Grid Width="300">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <TextBox Grid.Row ="0" x:Name="textBoxItem" Margin="10" FontSize="20" HorizontalAlignment="Stretch"/>
+                <Button Grid.Row ="0" Click="dodajKupon" Content="Dodaj text" Margin="10" FontSize="20" HorizontalAlignment="Right"/>
+                <Button Grid.Row ="1" Click="wylosujKupon" Content="Wylosuj" Margin="10" FontSize="20" VerticalAlignment="Center"/>
+            </Grid>
+        </Viewbox>
+    </Grid>
+</Window>
