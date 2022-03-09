@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Zadanie1"
         mc:Ignorable="d"
-        Title="Zadanie1" Height="500" Width="800" MinHeight="500" MinWidth="800">
+        Title="MainWindow" Height="500" Width="800" MinHeight="500" MinWidth="800">
     <Grid Background="#4287f5">
         <Grid.RowDefinitions>
             <RowDefinition/>
@@ -16,12 +16,12 @@
                 <ColumnDefinition/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <ListBox x:Name="listaK" FontSize="15" Margin="10" Background="#494d54" Foreground="#ffffff">
+            <ListBox x:Name="listaK" Grid.Column="1" FontSize="15" Margin="10" Foreground="#ffffff">
                 <ListBox.Resources>
                     <Style TargetType="Border"></Style>
                 </ListBox.Resources>
             </ListBox>
-            <Viewbox Grid.Column="1">
+            <Viewbox Grid.Column="0">
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition/>

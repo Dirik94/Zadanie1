@@ -20,16 +20,16 @@ namespace Zadanie1
     /// </summary>
     public partial class MainWindow : Window
     {
-        ImaszynaLosujaca maszynaLosujaca;
+        private MaszynaLosujaca maszynaLosujaca;
         public MainWindow()
         {
             InitializeComponent();
-            maszynaLosujaca = new Class1();
+            maszynaLosujaca = new MaszynaLosujaca();
         }
 
         private void dodajKupon(object sender, RoutedEventArgs e)
         {
-            if (textBoxItem.Text != string.Empty)
+            if (textBoxItem.Text != "")
             {
                 maszynaLosujaca.dodajNowyKupon(textBoxItem.Text);
                 textBoxItem.Text = "";
@@ -50,7 +50,10 @@ namespace Zadanie1
         private void listaOdswierz()
         {
             listaK.Items.Clear();
-            maszynaLosujaca.wszystkieKupony().ForEach(x => listaK.Items.Add(x));
+            foreach (string item in maszynaLosujaca.wszystkieKupony())
+            {
+                listaK.Items.Add(item);
+            }
         }
     }
 }

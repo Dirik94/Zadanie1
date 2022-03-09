@@ -4,20 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-internal interface ImaszynaLosujaca
-{
-    public void dodajNowyKupon(string value);
-
-    public List<string> wszystkieKupony();
-
-    public string wylowsowanyKupon();
-
-    public bool listaKuponowPusta();
-}
-
 namespace Zadanie1
 {
-    class Class1 : ImaszynaLosujaca
+    class MaszynaLosujaca
     {
         private List<string> kupony = new();
         private Random random = new();
@@ -42,7 +31,7 @@ namespace Zadanie1
 
         public bool listaKuponowPusta()
         {
-            return !(kupony?.Any() ?? false);
+            return kupony.Count == 0;
         }
     }
 }
