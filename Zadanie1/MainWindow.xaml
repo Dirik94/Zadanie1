@@ -16,7 +16,7 @@
                 <ColumnDefinition/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <ListBox x:Name="listaK" Grid.Column="1" FontSize="15" Margin="10" Foreground="#ffffff">
+            <ListBox x:Name="listaK" Grid.Column="1" FontSize="15" Margin="10">
                 <ListBox.Resources>
                     <Style TargetType="Border"></Style>
                 </ListBox.Resources>
